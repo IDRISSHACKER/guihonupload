@@ -1,0 +1,20 @@
+.Uploader{
+    border: dashed 2px var(--primary) !important;
+    border-radius: var(--radius);
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Uploader-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.imgTitle{
+    font-weight: 600 !important;
+}
