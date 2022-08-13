@@ -99,7 +99,7 @@ function Uploader() {
 
   const handleUpload = async()=>{
     setUploading(true)
-    const url = `http://localhost:5000/upload`;
+    const url = `https://cdn.guihon.cm/upload`;
     const formData = new FormData();
     
     formData.append("file", img);
@@ -117,14 +117,25 @@ function Uploader() {
       .then((res) => {
         handleReset()
         setUploading(false)
-        const path = `http://localhost:5000/${res.data.file}?quality=normal&compressed=true`
+        const path = `https://cdn.guihon.cm/${res.data.file}?quality=normal&compressed=true`
         setApercu(path)
         setLink(path)
         setOpen(true)
         notify()
       })
       .catch((err) => {
-        console.log(err)
+        toast.error(
+          "Le fichier n'as pus être televerser",
+          {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }
+        );
         setUploading(false);
       });
   }
