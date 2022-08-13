@@ -1,3 +1,9 @@
 .Head{
     margin-bottom: 40px;
+    position: fixed;
+    top: 0;
+    background: #0f1128;
+    width: 100%;
+    padding: 25px;
+    color: white !important;
 }

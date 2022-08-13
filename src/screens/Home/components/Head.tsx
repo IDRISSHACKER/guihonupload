@@ -1,12 +1,12 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography } from "@mui/material";
 import "./Head.css"
 
 function Head() {
   return (
-    <Box className="Head">
+    <div className="Head">
       <Typography variant="h4">Guihon Cdn File Uploader</Typography>
-    </Box>
+    </div>
   );
 } 
 
